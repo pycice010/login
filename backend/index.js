@@ -23,12 +23,18 @@ router.use(express.urlencoded({ extended: false }))
 
 let products = {
     list: [
-        { id: 1, name: 'UTHA', number: 44, price: 1200, imageurl: "https://i.pinimg.com/564x/f2/2e/3e/f22e3e76e6e40bea8c76439d5456f78f.jpg?format=jpg&name=900x900" },
-        { id: 2, name: 'HOUSTON', number: 0, price: 2000, imageurl: "https://i.pinimg.com/474x/32/5d/ea/325dea7aa78368cc74af9a643abf0975.jpg?format=jpg&name=900x900" },
-        { id: 3, name: 'DALLAS', number: 77, price: 1500, imageurl: "https://i.pinimg.com/474x/10/29/0d/10290d3b1a3a27a88509c2d637ffbd69.jpg?format=jpg&name=900x900" },
-        { id: 4, name: 'CAVALIERS', number: 23, price: 5000, imageurl: "https://i.pinimg.com/474x/f8/34/53/f8345373485b7ca4b250b48de093317b.jpg?format=jpg&name=900x900" },
-        { id: 6, name: 'MIAMI', number: 21, price: 4000, imageurl: "https://i.pinimg.com/474x/68/34/06/683406a3b5f058ea1ea9ff458f89c8c1.jpg?format=jpg&name=900x900" },
-        { id: 7, name: 'LAKERS', number: 24, price: 4500, imageurl: "https://i.pinimg.com/474x/93/06/f5/9306f54fff5dd2b6bd261ec29678cc04.jpg?format=jpg&name=900x900" }
+        { id: 1, name: 'Viper', position: 'Controller', skill: 'Q - POISON CLOUD,E - TOXIC SCREEN,C - SNAKE BITE,X - VIPERS PIT', imageurl: "https://i.ytimg.com/vi/WuZGmKZuoaI/maxresdefault.jpg" },
+        { id: 2, name: 'Killjoy', position: 'Sentinel', skill: 'Q - ALARMBOT,E - TURRET,C - NANOSWARM,X - LOCKDOWN', imageurl: "https://i.ytimg.com/vi/gFcm2D8Gc4g/maxresdefault.jpg" },
+        { id: 3, name: 'Reyna', position: 'Duelist', skill: 'Q - DEVOUR,E - DISMISS,C - LEER,X - EMPRESS', imageurl: "https://cdn.oneesports.co.th/cdn-data/wp-content/uploads/sites/3/2020/06/atey-ghailan-gold20-rey-reyna-golden-moment-thumbnail-1.jpg" },
+        { id: 4, name: 'Breach', position: 'Initiator', skill: 'Q - FLASHPOINT,E - FAULT LINE,C - AFTERSHOCK,X - ROLLING THUNDER', imageurl: "https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2020/10/30/odxgos7ooyc39zura8wn/valorant-operator-breach" },
+        { id: 5, name: 'Sage', position: 'Sentinel', skill: 'Q - SLOW ORB,E - HEALING ORB,C - BARRIER ORB,X - RESURRECTION', imageurl: "https://cdn.realsport101.com/images/ncavvykf/gfinityesports/7c8ed407ca89f6c14ac8d9bc80ac5f0c84d178fc-1920x1080.jpg?rect=1,0,1919,1080&w=700&h=394" },
+        { id: 6, name: 'Sova', position: 'Initiato', skill: 'Q - SHOCK BOLT,E - RECON BOLT,C - OWL DRONE,X - HUNTER’S FURY', imageurl: "https://img.4gamers.com.tw/news-image/2cf9806b-5ead-4bcb-b4c3-1efc4ac37b10.jpg" },
+        { id: 7, name: 'Kayo', position: 'Initiato', skill: 'Q - FLASH/DRIVE,E - ZERO/POINT,C - FRAG/MENT,X - NULL/CMD', imageurl: "https://i.ytimg.com/vi/eU1l7eBy2_Y/maxresdefault.jpg" },
+        { id: 8, name: 'Jett', position: 'Duelist', skill: 'Q - UPDRAFT,E - TAILWIND,C - CLOUDBURST,X - BLADE STORM', imageurl: "https://i.ytimg.com/vi/FHEHDHSiUfM/maxresdefault.jpg" },
+        { id: 9, name: 'Skye', position: 'Initiato', skill: 'Q - TRAILBLAZER,E - GUIDING LIGHT,C - REGROWTH,X - SEEKERS', imageurl: "https://i.ytimg.com/vi/C3QTyMXi-WE/maxresdefault.jpg" },
+        { id: 10, name: 'Neon', position: 'Duelist', skill: 'Q - RELAY BOLT,E - HIGH GEAR,C - FAST LANE,X - OVERDRIVE', imageurl: "https://www.dexerto.com/wp-content/uploads/2022/01/10/valorant-neon-guide-abilities-how-to-play-tips-tricks.jpg" },
+        { id: 11, name: 'Yoru', position: 'Duelist', skill: 'Q - BLINDSIDE,E - GATECRASH,C - FAKEOUT,X - DIMENSIONAL DRIFT', imageurl: "https://i.ytimg.com/vi/GdOEQv-zQVw/maxresdefault.jpg" },
+        { id: 12, name: 'Brimstone', position: 'Controller', skill: 'Q - INCENDIARY,E - SKY SMOKE,C - STIM BEACON,X - ORBITAL STRIKE', imageurl: "https://thumbor.4gamers.com.tw/zbQUYZU_nWFsHXPmlBPFalBZ3iY=/800x0/filters:extract_cover():no_upscale():quality(80):format(jpeg):background_color(FFFFFF)/https%3A%2F%2Fimg.4gamers.com.tw%2Fckfinder-th%2Ffiles%2F144651-brimstone-amp_main_media_schema-3.png%3FversionId%3DUgikAz8lgWUUI6g72bZ0kqZE0I_LRAY9" },
 
     ]
 }
@@ -91,8 +97,8 @@ router.route('/products')
         let newproduct = {}
         newproduct.id = (products.list.length) ? products.list[products.list.length - 1].id + 1 : 1
         newproduct.name = req.body.name
-        newproduct.number = req.body.number
-        newproduct.price = req.body.price
+        newproduct.position = req.body.position
+        newproduct.skill = req.body.skill
         newproduct.imageurl = req.body.imageurl
         products = { "list": [...products.list, newproduct] }
         res.json(products.list)
@@ -109,8 +115,8 @@ router.route('/products/:product_id')
         const id = products.list.findIndex(item => +item.id === +product_id)
         products.list[id].id = req.body.id
         products.list[id].name = req.body.name
-        products.list[id].number = req.body.number
-        products.list[id].price = req.body.price
+        products.list[id].position = req.body.position
+        products.list[id].skill = req.body.skill
         products.list[id].imageurl = req.body.imageurl
         res.json(products.list)
     })
@@ -166,8 +172,8 @@ router.put('/reproducts/:product_id',
     async (req, res) => {
         const product_id = req.params.product_id
         const id = products.list.findIndex(item => +item.id === +product_id)
-        if (products.list[id].number > 0)
-            products.list[id].number--
+        if (products.list[id].position > 0)
+            products.list[id].position--
         res.json(req.products)
 
     })
@@ -176,7 +182,7 @@ router.put('/addproduct/:product_id',
     async (req, res) => {
         const product_id = req.params.product_id
         const id = products.list.findIndex(item => +item.id === +product_id)
-        products.list[id].number++
+        products.list[id].position++
         res.json(req.products)
     })
 

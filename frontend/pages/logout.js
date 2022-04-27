@@ -30,28 +30,18 @@ export default function Logout({ token }) {
     }
 
     return (
-        <Layout class="bg-red-100 sm:h-screen ">
+        <Layout class="bg-[#E5D0E2]">
             <Head>
                 <meta charset="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"></link>
             </Head>
-            <div class="bg-red-100 sm:h-screen ">
-                <div class="py-20">
-                    <div class="py-20">
-                        <div class="py-20">
-                            <div class="py-20">
-                                <div class=" justify-center bg-gradient-to-r from-purple-500 to-pink-500 p-9 grid grid-row-3 gap-3 pt-10 ">
-                                    <h1 class="pt-6 text-3xl text-blue-600 flex flex-col justify-around  items-center font-bold font-mono">Logout</h1>
+                                <div class=" h-screen justify-center bg-gradient-to-r from-[#FFBBDA] to-[#75464A] p-9 grid grid-row-3 gap-3 pt-10 ">
+                                    <h1 class="pt-6 text-6xl text- flex flex-col justify-around text-[#D4D2F2] items-center font-extrabold">Logout</h1>
   
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
         </Layout>
     )
 }

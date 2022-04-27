@@ -41,29 +41,29 @@ export default function Register({ token }) {
     const registerForm = () => (
         <div>
 
-            <div class="font-serif">
+            <div class="font-extrabold text-[#695A5B]">
                 Username:
             </div>
-            <div class="font-serif">
+            <div class="font-extrabold text-[#695A5B]">
                 <input type="text"
                     name="username"
                     placeholder="username"
                     onChange={(e) => setUsername(e.target.value)}
                 />
             </div>
-            <div class="font-serif">
+            <div class="font-extrabold text-[#695A5B]">
                 Email:&nbsp;&nbsp;
             </div>
-            <div class="font-serif">
+            <div class="font-extrabold text-[#695A5B]">
                 <input type="email"
                     name="email"
                     placeholder="email"
                     onChange={(e) => setEmail(e.target.value)} />
             </div>
-            <div class="font-serif">
+            <div class="font-extrabold text-[#695A5B]">
                 Password:&nbsp;&nbsp;
             </div>
-            <div class="font-serif">
+            <div class="font-extrabold text-[#695A5B]">
                 <input type="password"
                     name="password"
                     placeholder="password"
@@ -82,24 +82,17 @@ export default function Register({ token }) {
 
                 <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap" rel="stylesheet"></link>
             </Head>
-            <div class="bg-red-100 sm:h-screen ">
                <Navbar />
-                <div class="py-20">
-                    <div class="py-20">
-                        <div class="py-20">
-                            <div class="py-18">
-                                <div class=" justify-center bg-gradient-to-r from-purple-500 to-pink-500 p-9 grid grid-row-3 gap-3 pt-10 ">
-                                    <h1 class="pt-6 text-3xl text-blue-600 flex flex-col justify-around  items-center font-bold font-serif">Register</h1>
+
+                                <div class=" h-screen justify-center bg-gradient-to-r from-[#FFBBDA] to-[#75464A] p-9 grid grid-row-3 gap-3 pt-10 ">
+                                    <h1 class="pt-6 text-3xl text- flex flex-col justify-around text-[#D4D2F2] items-center font-extrabold">Register</h1>
                                     {registerForm()}
                                     <div>
-                                        <button onClick={register} class="shadow-md mr-4 bg-red-500 p-2 rounded-lg hover:bg-red-200 hover:text-red-500 font-serif">Register</button>
+                                        <button onClick={register} class="shadow-md mr-4 bg-[#695A5B] text-[#D4D2F2] p-2 rounded-lg hover:bg-[#D4D2F2] hover:text-black-100 font-bold font-extrabold">Register</button>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                         
                 </div>
-            </div>
 
         </Layout>
     )

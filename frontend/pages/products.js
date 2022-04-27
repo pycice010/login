@@ -8,13 +8,13 @@ const URL2 = "http://localhost/api/purchase";
 const fetcher = url => axios.get(url).then(res => res.data)
 
 const SWR2 = () => {
-    const [products, setproducts] = useState({ list: [{ id: 1, name: 'cat', number: 1, price: 2000 },] })
+    const [products, setproducts] = useState({ list: [{ id: 1, name: 'cat', position: 'controller', skill: 'smoke' },] })
     const [product, setproduct] = useState({})
     const [id, setId] = useState(0)
     const [name, setName] = useState('')
-    const [number, setNumber] = useState(0)
+    const [position, setPosition] = useState('')
     const [imageurl,setImageurl] = useState('')
-    const [price, setPrice] = useState(0)
+    const [skill, setSkill] = useState('')
 
 
     useEffect(() => { getproducts() }, [])
@@ -35,25 +35,22 @@ const SWR2 = () => {
         if (products && products.length)
             return products.map((product, index) =>
             
-                <li key={index} class=" rounded-lg outline outline-offset-1 outline-blue-200 ">
-                    <h6 class="text-2xl text-red-500 pb-1 pt-1 not-italic font-bold font-serif">{(product) ? product.name : '-'}</h6>
-                    <img src={product.imageurl} width="200" height="100" class="items-center justify-around"></img>
-                    <div class="border-4 border-blue-200 rounded-lg bg-red-100 divide-y-4 divide-blue-300">
-                    <h6 class="font-bold font-serif">Number:{(product) ? product.number : 0}</h6>
-                    <h6 class="font-bold font-serif">price:{(product) ? product.price : 0}</h6>
-
-                    </div>
+                <li key={index} class=" rounded-lg border-dashed outline outline-offset-1 outline-[#DBCDE3] justify-between">
+                    <h6 class="text-2xl text-[#2A505A] pb-1 pt-1 not-italic font-bold font-extrabold">{(product) ? product.name : '-'}</h6>
+                    <img src={product.imageurl} width="2000" height="4000" class="items-center justify-around"></img>
+                    <h6 class="font-extrabold text-[#695A5B]">position:{(product) ? product.position : 0}</h6>
+                    <h6 class="font-extrabold text-[#695A5B]">skill:{(product) ? product.skill : 0}</h6>
                    
                 </li>
                 
             )
         else
-            return <h1 class="font-bold font-serif text-2xl text-teal-900 items-center "> No product</h1>
+            return <h1 class="text-3xl bg-clip-text text-transparent bg-gradient-to-r from-[#FFBBDA] to-[#75464A] pb-8 pt-8 font-bold font-extrabold "> No Information</h1>
     }
     return (<div class="bg-red-100 sm:h-screen items-center " >
         <Navbar />
         <div class="flex flex-col justify-around  items-center">
-        <h1 class="text-4xl text-teal-900 pb-8 pt-8 font-bold font-serif">Products Show</h1>
+        <h1 class="text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#FFBBDA] to-[#75464A] pb-8 pt-8 font-bold font-extrabold">AGENT VALORANT</h1>
         <ul class=" grid grid-cols-6 gap-10  " >{printproduct()}</ul>
         </div>
     </div>

@@ -38,7 +38,7 @@ export default function Login({ token }) {
     }
 
     const loginForm = () => (
-        <div class="font-serif">
+        <div class="font-extrabold text-[#695A5B]">
             <div>
                 Username:
             </div>
@@ -73,24 +73,16 @@ export default function Login({ token }) {
 
                 <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap" rel="stylesheet"></link>
             </Head>
-            <div class="bg-red-100 sm:h-screen ">
+            <div class="bg-[#E5D0E2]">
                
-                <div class="py-20">
-                    <div class="py-20">
-                        <div class="py-20">
-                            <div class="py-18">
-                                <div class=" justify-center bg-gradient-to-r from-purple-500 to-pink-500 p-9 grid grid-row-3 gap-3 pt-10 ">
-                                    <h1 class="pt-6 text-3xl text-blue-600 flex flex-col justify-around  items-center ">Login</h1>
+                                <div class="h-screen justify-center bg-gradient-to-r from-[#FFBBDA] to-[#75464A] p-9 grid grid-row-3 gap-3 pt-10 ">
+                                    <h1 class="pt-6 text-6xl text- flex flex-col justify-around text-[#D4D2F2] items-center font-extrabold">Login</h1>
                                     {loginForm()}
                                     <div>
-                                        <button onClick={login} class="shadow-md mr-4 bg-blue-500 p-2 rounded-lg hover:bg-blue-700 hover:text-blue-200 font-bold font-serif">Login</button>
-
+                                        <button onClick={login} class="shadow-md mr-4 bg-[#695A5B] text-[#D4D2F2] p-2 rounded-lg hover:bg-[#D4D2F2] hover:text-black-100 font-bold font-extrabold">Login</button>
+                                        
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </Layout>
     )
