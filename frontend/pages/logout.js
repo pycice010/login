@@ -20,12 +20,6 @@ export default function Logout({ token }) {
         console.log('remove token: ', token)
         let result = await axios.get(`${config.URL}/logout`, { withCredentials: true })
         //setStatus("Logout successful")
-        Swal.fire({
-            icon: 'error',
-            title: 'Sure!!!',
-            text: 'You want to logout?',
-            footer: '<a href="/products">back to Our product?</a>'
-          })
         await router.push('/login')
     }
 
